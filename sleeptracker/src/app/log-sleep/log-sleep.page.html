@@ -1,0 +1,36 @@
+ <ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+      
+      <ion-button fill = "outline" color = "secondary" (click)="goHome()" icon-end>
+          <ion-icon color = "secondary" name="arrow-back"></ion-icon>Back</ion-button>
+        </ion-buttons>
+        <ion-title color="dark">Log Sleep</ion-title>
+    </ion-toolbar>
+    
+  </ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-label color="secondary">Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY" placeholder="Select Date" [(ngModel)]="StartDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color = "medium">Start Time</ion-label>
+      <ion-datetime displayFormat="HH:mm:ss" placeholder="Select Time" [(ngModel)]="StartDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="secondary">End Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY" placeholder="Select Date" [(ngModel)]="EndDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="medium">End Time</ion-label>
+      <ion-datetime displayFormat="HH:mm:ss" placeholder="Select Time" [(ngModel)]="EndDate"></ion-datetime>
+    </ion-item>
+
+    <ion-button color = "secondary" (click)="presentLoadingWithOptions()" (click)="LogSleep()" round>
+    Log Entry
+    </ion-button>
+
+</ion-content>
+

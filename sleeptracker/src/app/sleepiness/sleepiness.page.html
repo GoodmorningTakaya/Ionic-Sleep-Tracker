@@ -1,0 +1,37 @@
+ <ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+      
+      <ion-button fill = "outline" color = "secondary" (click)="goHome()" icon-end>
+          <ion-icon color = "secondary" name="arrow-back"></ion-icon>Back</ion-button>
+        </ion-buttons>
+        <ion-title color="dark">Log Sleepiness</ion-title>
+    </ion-toolbar>
+    
+  </ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label color = "secondary">Sleepiness Level</ion-label>
+            <ion-select placeholder = "1" okText="Okay" cancelText="Dismiss" [(ngModel)] = "sleepiness">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+                <ion-select-option value="6">6</ion-select-option>
+                <ion-select-option value="7">7</ion-select-option>
+            </ion-select>
+        
+    </ion-item>
+    <ion-item>
+        <ion-label color = "medium">Current Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate"></ion-datetime>
+        <ion-datetime displayFormat="HH:mm:ss" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    
+    <ion-button color = "secondary" (click)="presentLoadingWithOptions()" (click)="LogSleepiness()" round>
+    
+    Log Entry
+    </ion-button>
+</ion-content>

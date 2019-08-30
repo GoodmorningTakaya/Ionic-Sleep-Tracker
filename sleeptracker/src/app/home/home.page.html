@@ -1,0 +1,67 @@
+
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-grid>
+        <ion-row align-items-center>
+            <ion-col size="3">
+            </ion-col>
+            <ion-col size="1">
+            
+                <ion-icon size="large" color="secondary" name="person"></ion-icon>
+            </ion-col>
+            
+             <ion-col size="6">
+             <ion-title color="dark">Sleep Tracker</ion-title>
+                 
+            </ion-col>
+            <ion-col size="2">
+            </ion-col>
+            
+        </ion-row>
+      </ion-grid>
+
+
+    
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+      <ion-row align-items-center>
+          <ion-col size="12">
+              <ion-item  lines = "none">
+              <ion-button color = "secondary" size="default" (click)="LogSleep()" block icon-start>
+                  <ion-icon ios="ios-alarm" md="md-alarm"></ion-icon>
+                   Log Sleep
+              </ion-button>
+              </ion-item>
+          </ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+          <ion-col >
+              <ion-item  lines = "none">
+              <ion-button color = "secondary" size="default"(click)="LogSleepiness()" block icon-start>
+                  <ion-icon ios="ios-cloudy-night" md="md-cloudy-night"></ion-icon>
+                   Record Sleepiness
+              </ion-button>
+            </ion-item>
+          </ion-col>
+      </ion-row>
+      
+      <ion-row align-items-center>
+          <ion-col>
+              <ion-item  lines = "none">
+              <ion-button color = "secondary" size="default" (click)="ViewData()" block icon-start>
+                  <ion-icon ios="ios-clipboard" md="md-clipboard"></ion-icon>
+                   View Data
+              </ion-button>
+                </ion-item>
+          </ion-col>
+      </ion-row>
+      
+  </ion-grid>
+</ion-content>
+    
+
+

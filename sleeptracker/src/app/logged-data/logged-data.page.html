@@ -1,0 +1,43 @@
+ <ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+      
+      <ion-button fill = "outline" color = "secondary" (click)="goHome()" icon-end>
+          <ion-icon color = "secondary" name="arrow-back"></ion-icon>Back</ion-button>
+        </ion-buttons>
+        <ion-title color="dark">Data Log</ion-title>
+    </ion-toolbar>
+    
+  </ion-header>
+
+<ion-content padding>
+    <ion-list inset = "true">
+        <ion-label color = "dark" position = "floating">HOURS SLEPT</ion-label>
+        <ion-item *ngFor="let i of overnight">
+            <ion-label text-wrap>
+                <ion-text color="secondary">
+                    {{i.dateString()}}
+                </ion-text><br>
+                <ion-text color="medium">
+                    {{"Time Slept: "+i.summaryString()}}
+                </ion-text>
+            </ion-label>
+                
+        </ion-item>
+    </ion-list>
+     <ion-list inset = "true">
+        <ion-label color = "dark" position = "floating">SLEEPINESS</ion-label>
+        <ion-item *ngFor="let i of sleepiness">
+            <ion-label text-wrap>
+                <ion-text color="secondary">
+                    {{i.dateString()}}
+                </ion-text><br>
+                <ion-text color="medium">
+                    {{"Sleepiness Level: "+i.summaryString()}}
+                </ion-text>
+            </ion-label>
+                
+        </ion-item>
+    </ion-list>
+    
+</ion-content>
